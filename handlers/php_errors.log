@@ -1,0 +1,52 @@
+[26-Dec-2017 12:36:35 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined method eRC5::encypt() in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:10
+Stack trace:
+#0 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php on line 10
+[26-Dec-2017 12:37:33 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'RC5' not found in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:82
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php(10): eRC5->encrypt('ExcelV44')
+#1 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 82
+[26-Dec-2017 12:45:58 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'RC5' not found in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\rc5.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\rc5.php on line 9
+[26-Dec-2017 12:46:34 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'RC5' not found in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\rc5.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\rc5.php on line 9
+[26-Dec-2017 14:20:14 Asia/Manila] PHP Notice:  Undefined variable: Cr3 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 194
+[26-Dec-2017 14:20:14 Asia/Manila] PHP Stack trace:
+[26-Dec-2017 14:20:14 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[26-Dec-2017 14:20:14 Asia/Manila] PHP   2. eRC5->encrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:12
+[26-Dec-2017 14:20:14 Asia/Manila] PHP Notice:  Undefined variable: Ar3 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 195
+[26-Dec-2017 14:20:14 Asia/Manila] PHP Stack trace:
+[26-Dec-2017 14:20:14 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[26-Dec-2017 14:20:14 Asia/Manila] PHP   2. eRC5->encrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:12
+[26-Dec-2017 14:20:14 Asia/Manila] PHP Notice:  Undefined variable: Dr3 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 196
+[26-Dec-2017 14:20:14 Asia/Manila] PHP Stack trace:
+[26-Dec-2017 14:20:14 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[26-Dec-2017 14:20:14 Asia/Manila] PHP   2. eRC5->encrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:12
+[26-Dec-2017 14:20:14 Asia/Manila] PHP Notice:  Undefined variable: Br3 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 197
+[26-Dec-2017 14:20:14 Asia/Manila] PHP Stack trace:
+[26-Dec-2017 14:20:14 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[26-Dec-2017 14:20:14 Asia/Manila] PHP   2. eRC5->encrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:12
+[26-Dec-2017 14:23:14 Asia/Manila] PHP Parse error:  syntax error, unexpected '$xor_value' (T_VARIABLE), expecting ',' or ';' in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 5
+[26-Dec-2017 14:23:18 Asia/Manila] PHP Parse error:  syntax error, unexpected '$xor_value' (T_VARIABLE), expecting ',' or ';' in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 5
+[27-Dec-2017 23:16:32 Asia/Manila] PHP Notice:  Undefined variable: enc in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 98
+[27-Dec-2017 23:16:32 Asia/Manila] PHP Stack trace:
+[27-Dec-2017 23:16:32 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[27-Dec-2017 23:16:32 Asia/Manila] PHP   2. eRC5->encrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:12
+[27-Dec-2017 23:16:32 Asia/Manila] PHP Notice:  Undefined variable: enc in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 98
+[27-Dec-2017 23:16:32 Asia/Manila] PHP Stack trace:
+[27-Dec-2017 23:16:32 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[27-Dec-2017 23:16:32 Asia/Manila] PHP   2. eRC5->encrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:12
+[27-Dec-2017 23:16:32 Asia/Manila] PHP Notice:  Undefined variable: enc in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 98
+[27-Dec-2017 23:16:32 Asia/Manila] PHP Stack trace:
+[27-Dec-2017 23:16:32 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[27-Dec-2017 23:16:32 Asia/Manila] PHP   2. eRC5->encrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:12
+[27-Dec-2017 23:27:51 Asia/Manila] PHP Notice:  Undefined variable: output in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php on line 19
+[27-Dec-2017 23:27:51 Asia/Manila] PHP Stack trace:
+[27-Dec-2017 23:27:51 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[27-Dec-2017 23:33:40 Asia/Manila] PHP Parse error:  syntax error, unexpected ',' in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 114
+[27-Dec-2017 23:33:59 Asia/Manila] PHP Parse error:  syntax error, unexpected ',' in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 114

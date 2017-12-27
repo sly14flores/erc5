@@ -1,0 +1,38 @@
+body {
+  padding-top: 90px;
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.console-status .panel-body {
+
+	background-color: #282828;
+	font-size: 12px;
+
+}
+
+.console-status .panel-body .output {
+	
+	height: 250px;
+	font-family: 'Lucida Console';
+	overflow: auto;
+	
+}
+
+.console-status .panel-body .success-response {
+	display: block;
+	color: #17b53c;
+}
+
+.console-status .panel-body .info-response {
+	display: block;			
+	color: #1ec9c3;
+}		
+
+.console-status .panel-body .error-response {
+	display: block;			
+	color: #ef2f2f;
+}
