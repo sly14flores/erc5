@@ -5,7 +5,8 @@
  * @copyright 2017
  */
  
-class RC5{
+class RC5 {
+	
     public static $S = array();
     public static $r = 12;
     public static $w = 32;
@@ -81,6 +82,67 @@ class RC5{
         
        return array(($A - self::$S[0]) & (pow(2,self::$w)-1), ($B - self::$S[1]) & (pow(2,self::$w)-1));
     }
+	
+	##
+	private static function _nullpadding($str,$length=16) {
+		if(strlen($str)%$length != 0){
+			$str .= str_repeat(chr(0),$length-strlen($str)%$length);
+		}
+		return $str;
+	}
+	 
+	private static function key($key) {
+		for ($s = array(), $i = 0; $i < 256; $i++)
+			$s[$i] = $i;
+		for ($j = 0, $i = 0; $i < 256; $i++)
+		{
+			$j = ($j + $s[$i] + ord($key[$i % strlen($key)])) % 256;
+			$x = $s[$i];
+			$s[$i] = $s[$j];
+			$s[$j] = $x;
+		}
+		  
+		return $s;
+	}
+	 
+	// convert 32bits interger to 4characters string
+	private static function _32bits2str($block) {
+		return pack('N',$block & 0xffffffff);
+	}
+	// convert 4characters string to 32bits interger
+	private static function _str232bits($block) {
+		return unpack('N*',$block)[1];
+	}
+	 
+	//Stream cipher encrypt use RC5
+	public static function RC5enc($str,$key,$mode='ECB') {
+		$str = self::_nullpadding($str, 8);//var_dump($str);die();
+		$enc = '';
+		$k = self::key($key); //var_dump($k);die();
+		self::rc5_init($k);
+		for($i=0;$i<strlen($str)/8;$i++){
+			$block = substr($str,$i*8,8);
+			$chr = array(self::_str232bits(substr($block,0,4)),self::_str232bits(substr($block,4,4)));  
+			$e = self::rc5_encrypt($chr);
+			$enc .= self::_32bits2str($e[0]).self::_32bits2str($e[1]);
+		}
+		return $enc;
+	}
+	  
+	//Stream cipher decrypt use RC5
+	public static function RC5dec($str,$key,$mode='ECB') {
+		$enc = '';
+		$k = self::key($key); 
+		self::rc5_init($k); 
+		for($i=0;$i<strlen($str)/8;$i++){
+			$block = substr($str,$i*8,8);
+			$chr = array(self::_str232bits(substr($block,0,4)),self::_str232bits(substr($block,4,4))); 
+			$e = self::rc5_decrypt($chr);
+			$enc .= self::_32bits2str($e[0]).self::_32bits2str($e[1]);
+		}
+		return rtrim($enc,chr(0));
+	}
+
 }
  
 ?>
