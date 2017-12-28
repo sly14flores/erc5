@@ -84,6 +84,7 @@ class RC5 {
     }
 	
 	##
+
 	private static function _nullpadding($str,$length=16) {
 		if(strlen($str)%$length != 0){
 			$str .= str_repeat(chr(0),$length-strlen($str)%$length);
@@ -101,7 +102,7 @@ class RC5 {
 			$s[$i] = $s[$j];
 			$s[$j] = $x;
 		}
-		  
+
 		return $s;
 	}
 	 
