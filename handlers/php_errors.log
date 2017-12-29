@@ -50,3 +50,11 @@ Stack trace:
 [27-Dec-2017 23:27:51 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
 [27-Dec-2017 23:33:40 Asia/Manila] PHP Parse error:  syntax error, unexpected ',' in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 114
 [27-Dec-2017 23:33:59 Asia/Manila] PHP Parse error:  syntax error, unexpected ',' in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 114
+[29-Dec-2017 11:04:51 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined method RC5::encrypt() in C:\Users\sly\Desktop\UwAmp310\www\erc5\handlers\rc5.php:10
+Stack trace:
+#0 {main}
+  thrown in C:\Users\sly\Desktop\UwAmp310\www\erc5\handlers\rc5.php on line 10
+[29-Dec-2017 11:16:07 Asia/Manila] PHP Notice:  Undefined variable: execution_time in C:\Users\sly\Desktop\UwAmp310\www\erc5\handlers\erc5.php on line 14
+[29-Dec-2017 11:16:07 Asia/Manila] PHP Stack trace:
+[29-Dec-2017 11:16:07 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[29-Dec-2017 11:28:17 Asia/Manila] PHP Parse error:  syntax error, unexpected ')', expecting ';' in C:\Users\sly\Desktop\UwAmp310\www\erc5\handlers\rc5.php on line 12

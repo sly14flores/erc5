@@ -119,7 +119,7 @@ class RC5 {
 	public static function RC5enc($str,$key,$mode='ECB') {
 		$str = self::_nullpadding($str, 8);//var_dump($str);die();
 		$enc = '';
-		$k = self::key($key); //var_dump($k);die();
+		$k = self::key($key); // var_dump($k);die();
 		self::rc5_init($k);
 		for($i=0;$i<strlen($str)/8;$i++){
 			$block = substr($str,$i*8,8);

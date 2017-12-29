@@ -78,6 +78,8 @@ class eRC5 {
 	
 	public function encrypt($str) {
 		
+		$results = [];
+		
 		$str_hex = strtoupper(bin2hex($str));
 	
 		$this->xor_value = eRC5::kmXor($str_hex);
@@ -99,10 +101,10 @@ class eRC5 {
 		for ($i=1; $i<=$r; $i++) {
 			
 			$output = '<span class="success-response">Round '.$i.':</span>'."\r\n";
-			$time_start = microtime(true);			
+			// $time_start = microtime(true);			
 			$abcd = eRC5::processEnc($A,$B,$C,$D);
-			$time_end = microtime(true);
-			$execution_time = $time_end - $time_start;			
+			// $time_end = microtime(true);
+			// $execution_time = $time_end - $time_start;			
 			$Ar = $abcd[0];
 			$Br = $abcd[1];
 			$Cr = $abcd[2];
@@ -112,11 +114,14 @@ class eRC5 {
 			$C = $Cr;
 			$D = $Dr;			
 			$output .= '<span class="success-response">Encrypted Text: '.$Ar.$Br.$Cr.$Dr.'</span>'."\r\n";
-			$output .= '<span class="info-response">Execution Time: '.$execution_time.' seconds</span>'."\r\n";
+			// $output .= '<span class="info-response">Execution Time: '.$execution_time.' seconds</span>'."\r\n";
 			$output .= '<span class="success-response">...</span>'."\r\n";
 			if ($i == 1) file_put_contents("$dir/erc5.txt",$output);
 			else file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);			
-
+			
+			// $data = array("round"=>$i,"encrypted"=>$A.$B.$C.$D,"time"=>$execution_time);
+			// $results[] = $data;
+			
 			if ($i == 12) break;
 			
 		};
@@ -130,39 +135,48 @@ class eRC5 {
 		if ($i == 13) {
 		
 			$output = '<span class="success-response">Round '.$i.':</span>'."\r\n";		
-			$time_start = microtime(true);		
+			// $time_start = microtime(true);		
 			$Ar13 = eRC5::strXor($Ar,$Cr);
 			$Br13 = eRC5::strXor($Br,$Cr);
 			$Cr13 = eRC5::strXor($Br,$Dr);
 			$Dr13 = eRC5::strXor($Dr,$Br);
-			$time_end = microtime(true);
-			$execution_time = $time_end - $time_start;
+			// $time_end = microtime(true);
+			// $execution_time = $time_end - $time_start;
 			$output .= '<span class="success-response">Encrypted Text: '.$Ar13.$Br13.$Cr13.$Dr13.'</span>'."\r\n";
-			$output .= '<span class="info-response">Execution Time: '.$execution_time.' seconds</span>'."\r\n";
+			// $output .= '<span class="info-response">Execution Time: '.$execution_time.' seconds</span>'."\r\n";
 			$output .= '<span class="success-response">...</span>'."\r\n";
-			file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);		
-
+			
+			// $data = array("round"=>$i,"encrypted"=>$Ar13.$Br13.$Cr13.$Dr13,"time"=>$execution_time);
+			// $results[] = $data;
+			
+			file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);				
+			
 		};
 
 		++$i;
 		if ($i == 14) {
 			
-			$output = '<span class="success-response">Round '.$i.':</span>'."\r\n";		
-			$time_start = microtime(true);			
+			$output = '<span class="success-response">Round '.$i.':</span>'."\r\n";
+			// $time_start = microtime(true);			
 			$Ar14 = $Cr;
 			$Br14 = $Ar;
 			$Cr14 = $Dr;
 			$Dr14 = $Br;
-			$time_end = microtime(true);
-			$execution_time = $time_end - $time_start;			
+			// $time_end = microtime(true);
+			// $execution_time = $time_end - $time_start;			
 			$output .= '<span class="success-response">Encrypted Text: '.$Ar14.$Br14.$Cr14.$Dr14.'</span>'."\r\n";
-			$output .= '<span class="info-response">Execution Time: '.$execution_time.' seconds</span>'."\r\n";
+			// $output .= '<span class="info-response">Execution Time: '.$execution_time.' seconds</span>'."\r\n";
 			$output .= '<span class="success-response">...</span>'."\r\n";
-			file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);			
+			
+			// $data = array("round"=>$i,"encrypted"=>$Ar14.$Br14.$Cr14.$Dr14,"time"=>$execution_time);
+			// $results[] = $data;				
+			
+			file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);
 			
 		};
 		
-		return $Ar14.$Br14.$Cr14.$Dr14;
+		// return $Ar14.$Br14.$Cr14.$Dr14;
+		// return $results;
 
 	}
 	

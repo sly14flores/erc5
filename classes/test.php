@@ -7,8 +7,8 @@ require_once 'rc5.php';
 // $dec = (RC5::rc5_decrypt( $enc )); 
 // var_dump($enc,$dec);
 
-$enc = RC5::RC5enc("Lorem","1234567891234567");
-$dec = RC5::RC5enc($enc,"1234567891234567");
+$enc = RC5::RC5enc("Lorem","4567812131415165");
+$dec = RC5::RC5dec($enc,"1234567891234567");
 
 var_dump($enc);
 var_dump($dec);
