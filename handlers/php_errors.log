@@ -58,3 +58,24 @@ Stack trace:
 [29-Dec-2017 11:16:07 Asia/Manila] PHP Stack trace:
 [29-Dec-2017 11:16:07 Asia/Manila] PHP   1. {main}() C:\Users\sly\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
 [29-Dec-2017 11:28:17 Asia/Manila] PHP Parse error:  syntax error, unexpected ')', expecting ';' in C:\Users\sly\Desktop\UwAmp310\www\erc5\handlers\rc5.php on line 12
+[07-Jan-2018 20:23:53 Asia/Manila] PHP Parse error:  syntax error, unexpected '=' in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php on line 8
+[07-Jan-2018 20:24:48 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined function sys_getloadavg() in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\usage.php:19
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php(18): get_server_cpu_usage()
+#1 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\usage.php on line 19
+[07-Jan-2018 20:26:14 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'COM' not found in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\usage.php:28
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php(18): get_server_load()
+#1 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\usage.php on line 28
+[07-Jan-2018 20:26:24 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'COM' not found in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\usage.php:28
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php(18): get_server_load()
+#1 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\usage.php on line 28
+[07-Jan-2018 20:44:08 Asia/Manila] PHP Fatal error:  Uncaught Error: Class 'COM' not found in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\usage.php:5
+Stack trace:
+#0 C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php(18): get_server_cpu_usage()
+#1 {main}
+  thrown in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\usage.php on line 5

@@ -26,4 +26,5 @@
 <span class="success-response">...</span>
 <span class="success-response">Round 14:</span>
 <span class="success-response">...</span>
-<span class="info-response">Execution Time: 0.055490016937256 seconds</span>
+<span class="info-response">Execution Time: 0.27000403404236 seconds</span>
+<span class="info-response">Processor Usage: 68%</span>
