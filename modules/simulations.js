@@ -32,8 +32,9 @@ angular.module('simulations-module',['jspdf-module']).factory('appService',funct
 			
 			scope.erc5 = {};
 			scope.erc5.km = '4567812131415165';			
-			scope.erc5.text = 'ExcelV44';	
+			scope.erc5.text = 'ExcelV44';
 			scope.erc5.rounds = 14;
+			scope.erc5.decrypt = false;
 			scope.erc5.results = [];
 		
 		};
@@ -113,18 +114,59 @@ angular.module('simulations-module',['jspdf-module']).factory('appService',funct
 				$http({
 				  method: 'POST',
 				  url: 'handlers/erc5.php',
+				  params: {m: 'encrypt'},
 				  data: scope.erc5			  
 				}).then(function mySucces(response) {
 					
-					scope.erc5.results = angular.copy(response.data);
+					scope.erc5.results = angular.copy(response.data);					
 					$timeout(function() { $interval.cancel(start); },1000);
+					
+					scope.erc5.etext = response.data;
 					
 				}, function myError(response) {
 
 					$timeout(function() { $interval.cancel(start); },1000);
 
-				});					
+				});		
 				
+			},
+			
+			decrypt: function(scope) {
+				
+				scope.erc5.decrypt = true;
+				
+				$timeout(function() {
+					
+					if (validate(scope,'erc5')) return;
+					
+					var start = $interval(function() {
+						
+						$timeout(function() {				
+							$('.erc5 .output').load('cache/erc5.txt',function() {
+								$('.erc5 .output').scrollTop(($('.erc5 .output')[0]).scrollHeight);								
+							});						
+						},300);				
+						
+					},500);
+					
+					$http({
+					  method: 'POST',
+					  url: 'handlers/erc5.php',
+					  params: {m: 'decrypt'},
+					  data: scope.erc5			  
+					}).then(function mySucces(response) {
+						
+						scope.erc5.results = angular.copy(response.data);
+						$timeout(function() { $interval.cancel(start); },1000);
+						
+					}, function myError(response) {
+
+						$timeout(function() { $interval.cancel(start); },1000);
+
+					});					
+					
+				},200);
+
 			},
 
 			print: function(scope) {

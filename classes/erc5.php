@@ -6,8 +6,8 @@ class eRC5 {
 	
 	function __construct($km,$r) {
 		
-		$this->charBin = array(0=>"0000",1=>"0001",2=>"0010",3=>"0011",4=>"0100",5=>"0101",6=>"0110",7=>"0111",8=>"1000",9=>"1001","A"=>"1010","B"=>"1011","C"=>"1100","D"=>"1101","E"=>"1110","F"=>"1111");	
-		$this->binChar = array("0000"=>"0","0001"=>"1","0010"=>"2","0011"=>"3","0100"=>"4","0101"=>"5","0110"=>"6","0111"=>"7","1000"=>"8","1001"=>"9","1010"=>"A","1011"=>"B","1100"=>"C","1101"=>"D","1110"=>"E","1111"=>"F");		
+		$this->charBin = array("0"=>"0000","1"=>"0001","2"=>"0010","3"=>"0011","4"=>"0100","5"=>"0101","6"=>"0110","7"=>"0111","8"=>"1000","9"=>"1001","A"=>"1010","B"=>"1011","C"=>"1100","D"=>"1101","E"=>"1110","F"=>"1111");
+		$this->binChar = array("0000"=>"0","0001"=>"1","0010"=>"2","0011"=>"3","0100"=>"4","0101"=>"5","0110"=>"6","0111"=>"7","1000"=>"8","1001"=>"9","1010"=>"A","1011"=>"B","1100"=>"C","1101"=>"D","1110"=>"E","1111"=>"F");
 		
 		$this->km = strtoupper(base_convert($km,10,16));
 		$this->r = $r;
@@ -175,42 +175,141 @@ class eRC5 {
 			
 		};
 		
-		// return $Ar14.$Br14.$Cr14.$Dr14;
+		return $Ar14.$Br14.$Cr14.$Dr14;
 		// return $results;
 
 	}
 	
 	public function decrypt($enc) {
 		
+		$abcd = eRC5::processDec("252A","6EF7","95B3","32E7");
+		// var_dump($abcd);
+		
+		exit();
+		
 		// echo "Decryption\n";
 		
 		$divisions = eRC5::divisions($enc);
-
-		$Ar5 = $divisions[0];
-		$Br5 = $divisions[1];
-		$Cr5 = $divisions[2];
-		$Dr5 = $divisions[3];
 		
-		// echo "\n";
-		// echo "Round 5:\n";
-		// echo "A. $Ar5\n";
-		// echo "B. $Br5\n";
-		// echo "C. $Cr5\n";
-		// echo "D. $Dr5\n";
+		$dir = "../cache";		
 		
-		$Ar3 = $Br5;
-		$Br3 = $Dr5;
-		$Cr3 = $Ar5;
-		$Dr3 = $Cr5;
+		$r = $this->r;
+		$i = $r;
 		
-		// echo "\n";
-		// echo "Round 3:\n";
-		// echo "A. $Ar3\n";
-		// echo "B. $Br3\n";
-		// echo "C. $Cr3\n";
-		// echo "D. $Dr3\n";
-
-		$Br2_lr = eRC5::leftRotate($Br3);
+		if ($i == 14) {
+			
+			$output = '<span class="success-response">Round '.$i.':</span>'."\r\n";
+			// $time_start = microtime(true);				
+			$Ar14 = $divisions[0];
+			$Br14 = $divisions[1];
+			$Cr14 = $divisions[2];
+			$Dr14 = $divisions[3];
+			$Ar = $divisions[0];
+			$Br = $divisions[1];
+			$Cr = $divisions[2];
+			$Dr = $divisions[3];			
+			// $time_end = microtime(true);
+			// $execution_time = $time_end - $time_start;			
+			$output .= '<span class="success-response">Decrypted Text: '.$Ar14.$Br14.$Cr14.$Dr14.'</span>'."\r\n";
+			// $output .= '<span class="info-response">Execution Time: '.$execution_time.' seconds</span>'."\r\n";
+			$output .= '<span class="success-response">...</span>'."\r\n";
+			
+			// $data = array("round"=>$i,"encrypted"=>$Ar14.$Br14.$Cr14.$Dr14,"time"=>$execution_time);
+			// $results[] = $data;				
+			
+			file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);				
+			
+			--$i;
+			
+		};
+		
+		if ($i == 13) {
+			
+			$output = '<span class="success-response">Round '.$i.':</span>'."\r\n";
+			// $time_start = microtime(true);				
+			$Ar13 = eRC5::strXor($Ar,$Cr);
+			$Br13 = eRC5::strXor($Br,$Cr);
+			$Cr13 = eRC5::strXor($Br,$Dr);
+			$Dr13 = eRC5::strXor($Dr,$Br);
+			// $time_end = microtime(true);
+			// $execution_time = $time_end - $time_start;			
+			$output .= '<span class="success-response">Decrypted Text: '.$Ar13.$Br13.$Cr13.$Dr13.'</span>'."\r\n";
+			// $output .= '<span class="info-response">Execution Time: '.$execution_time.' seconds</span>'."\r\n";
+			$output .= '<span class="success-response">...</span>'."\r\n";
+			
+			// $data = array("round"=>$i,"encrypted"=>$Ar13.$Br13.$Cr13.$Dr13,"time"=>$execution_time);
+			// $results[] = $data;				
+			
+			file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);				
+			
+			--$i;
+			
+		};		
+		
+		if ($i == 12) {
+			
+			$output = '<span class="success-response">Round '.$i.':</span>'."\r\n";
+			// $time_start = microtime(true);			
+			$Ar12 = $Br14;
+			$Br12 = $Dr14;
+			$Cr12 = $Ar14;
+			$Dr12 = $Cr14;
+			// $time_end = microtime(true);
+			// $execution_time = $time_end - $time_start;			
+			$output .= '<span class="success-response">Decrypted Text: '.$Ar12.$Br12.$Cr12.$Dr12.'</span>'."\r\n";
+			// $output .= '<span class="info-response">Execution Time: '.$execution_time.' seconds</span>'."\r\n";
+			$output .= '<span class="success-response">...</span>'."\r\n";
+			
+			// $data = array("round"=>$i,"encrypted"=>$Ar12.$Br12.$Cr12.$Dr12,"time"=>$execution_time);
+			// $results[] = $data;				
+			
+			file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);				
+			
+			--$i;
+			
+		};
+		
+		$A = $Ar12;
+		$B = $Br12;
+		$C = $Cr12;
+		$D = $Dr12;
+		
+		for ($i=11; $i>=1; --$i) {
+			
+			/* if ($i==9) {
+				var_dump($A);
+				var_dump($B);
+				var_dump($C);
+				var_dump($D);
+			}; */
+			
+			$output = '<span class="success-response">Round '.$i.':</span>'."\r\n";
+			// $time_start = microtime(true);			
+			$abcd = eRC5::processDec($A,$B,$C,$D);
+			// $time_end = microtime(true);
+			// $execution_time = $time_end - $time_start;			
+			$Ar = $abcd[0];
+			$Br = $abcd[1];
+			$Cr = $abcd[2];
+			$Dr = $abcd[3];
+			$A = $abcd[0];
+			$B = $abcd[1];
+			$C = $abcd[2];
+			$D = $abcd[3];
+			// $time_end = microtime(true);
+			// $execution_time = $time_end - $time_start;			
+			$output .= '<span class="success-response">Decrypted Text: '.$A.$B.$C.$D.'</span>'."\r\n";
+			// $output .= '<span class="info-response">Execution Time: '.$execution_time.' seconds</span>'."\r\n";
+			$output .= '<span class="success-response">...</span>'."\r\n";
+			
+			// $data = array("round"=>$i,"encrypted"=>$A.$B.$C.$D,"time"=>$execution_time);
+			// $results[] = $data;				
+			
+			file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);			
+			
+		};
+		
+		/* $Br2_lr = eRC5::leftRotate($Br3);
 		$Br2 = eRC5::strXor($Ar3,$Br2_lr);
 		$Ar2_rr = eRC5::rightRotate($Ar3);
 		$Ar2 = eRC5::strXor($Ar2_rr,$Br2);
@@ -267,11 +366,11 @@ class eRC5 {
 		// echo "A. $A\n";
 		// echo "B. $B\n";
 		// echo "C. $C\n";
-		// echo "D. $D\n";		
+		// echo "D. $D\n";	 */	
 
 		$pt = $A.$B.$C.$D;
 		
-		$dec = eRC5::kmXor($pt);	
+		$dec = eRC5::kmXor($pt);
 		
 		return hex2bin($dec);
 		
@@ -299,32 +398,32 @@ class eRC5 {
 		
 	}
 	
-	private function processDec($A,$B,$C,$D) {
-		
-		$Ar = eRC5::strXor($A,$B);
-		$Ar = eRC5::leftRotate($Ar);
+	private function processDec($Ar3,$Br3,$Cr3,$Dr3) {
 
-		$Br = eRC5::strXor($Ar,$B);
-		$Br = eRC5::rightRotate($Br);
+		// $Br2_lr = eRC5::leftRotate($Br3);
+		// $Br2 = eRC5::strXor($Ar3,$Br2_lr);
+		// $Ar2_rr = eRC5::rightRotate($Ar3);
+		// $Ar2 = eRC5::strXor($Ar2_rr,$Br2);
+
+		$Cr2_n = eRC5::negateStr($Cr3); //var_dump($Cr2_n);
+		$Dr2_lr = eRC5::leftRotate($Dr3); //var_dump($Dr2_lr);
+		$Dr2_x = eRC5::strXor($Cr2_n,$Dr2_lr); // var_dump($Dr2_x);
+		// $Dr2 = eRC5::negateStr($Dr2_x);
+
+		// $Cr2_rr = eRC5::rightRotate($Cr3);
+		// $Cr2 = eRC5::strXor($Cr2_rr,$Dr2_x);
 		
-		$Dr_n = eRC5::negateStr($D);
-		
-		$Cr = eRC5::strXor($C,$Dr_n);
-		$Cr = eRC5::leftRotate($Cr);
-		
-		$Cr_n = eRC5::negateStr($Cr);
-		$Dr = eRC5::strXor($Cr_n,$Dr_n);
-		
-		$Dr = eRC5::rightRotate($Dr);
-		
-		return array($Ar,$Br,$Cr,$Dr);
-		
-	}	
+		// $result = array($Ar2,$Br2,$Cr2,$Dr2);
+		// var_dump($result);
+		// return array($Ar2,$Br2,$Cr2,$Dr2);
+
+	}
 	
 	private function strXor($str1,$str2) {
-
+		var_dump(hexdec($str1));
+		var_dump(hexdec($str2));
 		$str = dechex(hexdec($str1) ^ hexdec($str2));
-		
+		var_dump($str);
 		return strtoupper($str);
 
 	}	
@@ -368,7 +467,7 @@ class eRC5 {
 	private function leftRotate($str) {
 
 		$charBin = $this->charBin;
-		$binChar = $this->binChar;			
+		$binChar = $this->binChar;		
 		
 		$str_bin = "";		
 		$str_arr = str_split($str);				

@@ -8,19 +8,47 @@ require_once '../classes/erc5.php';
 require_once 'usage.php';
 
 $erc5 = new eRC5($_POST['km'],$_POST['rounds']);
-$time_start = microtime(true);
-$enc = $erc5->encrypt($_POST['text']);
-$time_end = microtime(true);
 
-// $usage = get_server_cpu_usage();
-exec('wmic cpu get LoadPercentage', $p);
+switch ($_GET['m']) {
 
-$execution_time = $time_end - $time_start;
-$output = '<span class="info-response">Execution Time: '.$execution_time.' seconds</span>'."\r\n";
-$output .= '<span class="info-response">Processor Usage: '.$p[1].'%</span>'."\r\n";
+	case "encrypt":
+	
+		$time_start = microtime(true);
+		$enc = $erc5->encrypt($_POST['text']);
+		$time_end = microtime(true);
 
-file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);
+		// $usage = get_server_cpu_usage();
+		exec('wmic cpu get LoadPercentage', $p);
 
-echo json_encode($enc);
+		$execution_time = $time_end - $time_start;
+		$output = '<span class="info-response">Execution Time: '.$execution_time.' seconds</span>'."\r\n";
+		$output .= '<span class="info-response">Processor Usage: '.$p[1].'%</span>'."\r\n";
+
+		file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);
+
+		echo $enc;
+	
+	break;
+	
+	case "decrypt":
+
+		$time_start = microtime(true);
+		$dec = $erc5->decrypt($_POST['etext']);
+		$time_end = microtime(true);
+
+		// $usage = get_server_cpu_usage();
+		exec('wmic cpu get LoadPercentage', $p);
+
+		$execution_time = $time_end - $time_start;
+		$output = '<span class="info-response">Execution Time: '.$execution_time.' seconds</span>'."\r\n";
+		$output .= '<span class="info-response">Processor Usage: '.$p[1].'%</span>'."\r\n";
+
+		file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);
+
+		echo $dec;
+
+	break;
+	
+}
 
 ?>

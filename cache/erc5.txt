@@ -40,5 +40,5 @@
 <span class="success-response">Round 14:</span>
 <span class="success-response">Encrypted Text: B15697BAC1D8FCA6</span>
 <span class="success-response">...</span>
-<span class="info-response">Execution Time: 0.1675021648407 seconds</span>
-<span class="info-response">Processor Usage: 62%</span>
+<span class="info-response">Execution Time: 0.018858194351196 seconds</span>
+<span class="info-response">Processor Usage: 10%</span>
