@@ -28,6 +28,7 @@ angular.module('simulations-module',['jspdf-module']).factory('appService',funct
 			scope.rc5.km = '4567812131415165';
 			scope.rc5.text = 'ExcelV44';
 			scope.rc5.rounds = 14;
+			scope.rc5.decrypt = false;			
 			scope.rc5.results = [];
 			
 			scope.erc5 = {};
@@ -68,6 +69,7 @@ angular.module('simulations-module',['jspdf-module']).factory('appService',funct
 				$http({
 				  method: 'POST',
 				  url: 'handlers/rc5.php',
+				  params: {m: 'encrypt'},				  
 				  data: scope.erc5			  
 				}).then(function mySucces(response) {
 					
@@ -80,7 +82,47 @@ angular.module('simulations-module',['jspdf-module']).factory('appService',funct
 
 				});				
 				
-			}
+			},
+			
+			decrypt: function(scope) {
+				
+				scope.rc5.decrypt = true;
+				
+				$timeout(function() {
+					
+					if (validate(scope,'rc5')) return;
+					
+					var start = $interval(function() {
+						
+						$timeout(function() {				
+							$('.rc5 .output').load('cache/rc5.txt',function() {
+								$('.rc5 .output').scrollTop(($('.rc5 .output')[0]).scrollHeight);								
+							});						
+						},300);				
+						
+					},500);
+					
+					$http({
+					  method: 'POST',
+					  url: 'handlers/rc5.php',
+					  params: {m: 'decrypt'},
+					  data: scope.rc5			  
+					}).then(function mySucces(response) {
+						
+						scope.rc5.results = angular.copy(response.data);
+						$timeout(function() { $interval.cancel(start); },1000);
+						
+						// scope.rc5.text = response.data;
+						
+					}, function myError(response) {
+
+						$timeout(function() { $interval.cancel(start); },1000);
+
+					});					
+					
+				},200);
+
+			},
 			
 		};
 		
@@ -158,6 +200,8 @@ angular.module('simulations-module',['jspdf-module']).factory('appService',funct
 						
 						scope.erc5.results = angular.copy(response.data);
 						$timeout(function() { $interval.cancel(start); },1000);
+						
+						scope.erc5.text = response.data;
 						
 					}, function myError(response) {
 

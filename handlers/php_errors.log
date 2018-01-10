@@ -3660,3 +3660,156 @@ Stack trace:
 [10-Jan-2018 11:37:46 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\sly\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
 [10-Jan-2018 11:37:46 Asia/Manila] PHP   3. eRC5->kmXor() C:\Users\sly\Desktop\UwAmp310\www\erc5\classes\erc5.php:334
 [10-Jan-2018 11:49:04 Asia/Manila] PHP Parse error:  syntax error, unexpected ',' in C:\Users\sly\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 198
+[10-Jan-2018 22:28:18 Asia/Manila] PHP Warning:  Wrong parameter count for var_dump() in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 369
+[10-Jan-2018 22:28:18 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:28:18 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:28:18 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:28:18 Asia/Manila] PHP   3. var_dump() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:369
+[10-Jan-2018 22:34:56 Asia/Manila] PHP Notice:  Undefined variable: output in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 187
+[10-Jan-2018 22:34:57 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:34:57 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:34:57 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:34:57 Asia/Manila] PHP Notice:  Undefined variable: dir in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 188
+[10-Jan-2018 22:34:57 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:34:57 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:34:57 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:35:23 Asia/Manila] PHP Notice:  Undefined variable: dir in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 188
+[10-Jan-2018 22:35:23 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:35:23 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:35:23 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:35:47 Asia/Manila] PHP Notice:  Undefined variable: dir in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 188
+[10-Jan-2018 22:35:47 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:35:47 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:35:47 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:38:00 Asia/Manila] PHP Notice:  Undefined variable: dir in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 189
+[10-Jan-2018 22:38:00 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:38:00 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:38:00 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:38:53 Asia/Manila] PHP Notice:  Undefined variable: output in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 191
+[10-Jan-2018 22:38:53 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:38:53 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:38:53 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined variable: Cr13 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined index:  in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 391
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined offset: 1 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 398
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined offset: 2 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 398
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined offset: 3 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 398
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined offset: 1 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined index:  in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 391
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined offset: 1 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 398
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined offset: 2 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 398
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined offset: 3 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 398
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined offset: 2 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined index:  in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 391
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined offset: 1 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 398
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined offset: 2 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 398
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined offset: 3 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 398
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined offset: 3 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined index:  in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 391
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined offset: 1 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 398
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined offset: 2 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 398
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Notice:  Undefined offset: 3 in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php on line 398
+[10-Jan-2018 22:55:02 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:0
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   2. eRC5->decrypt() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\erc5.php:36
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   3. eRC5->strXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:236
+[10-Jan-2018 22:55:02 Asia/Manila] PHP   4. eRC5->charXor() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\classes\erc5.php:377
+[10-Jan-2018 23:28:57 Asia/Manila] PHP Notice:  Undefined index: m in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\rc5.php on line 12
+[10-Jan-2018 23:28:57 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 23:28:57 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\rc5.php:0
+[10-Jan-2018 23:30:55 Asia/Manila] PHP Notice:  Undefined index: m in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\rc5.php on line 12
+[10-Jan-2018 23:30:55 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 23:30:55 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\rc5.php:0
+[10-Jan-2018 23:31:17 Asia/Manila] PHP Notice:  Undefined index: m in C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\rc5.php on line 12
+[10-Jan-2018 23:31:17 Asia/Manila] PHP Stack trace:
+[10-Jan-2018 23:31:17 Asia/Manila] PHP   1. {main}() C:\Users\SLY One\Desktop\UwAmp310\www\erc5\handlers\rc5.php:0

@@ -97,6 +97,11 @@ class eRC5 {
 
 		$dir = "../cache";		
 		
+		$output = '<span class="success-response">...</span>'."\r\n";
+		$output .= '<span class="success-response">ENCRYPTION</span>'."\r\n";
+		$output .= '<span class="success-response">...</span>'."\r\n";
+		file_put_contents("$dir/erc5.txt",$output);			
+		
 		$r = $this->r;
 		for ($i=1; $i<=$r; $i++) {
 			
@@ -116,8 +121,9 @@ class eRC5 {
 			$output .= '<span class="success-response">Encrypted Text: '.$Ar.$Br.$Cr.$Dr.'</span>'."\r\n";
 			// $output .= '<span class="info-response">Execution Time: '.$execution_time.' seconds</span>'."\r\n";
 			$output .= '<span class="success-response">...</span>'."\r\n";
-			if ($i == 1) file_put_contents("$dir/erc5.txt",$output);
-			else file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);			
+			// if ($i == 1) file_put_contents("$dir/erc5.txt",$output);
+			// else file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);
+			file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);			
 			
 			// $data = array("round"=>$i,"encrypted"=>$A.$B.$C.$D,"time"=>$execution_time);
 			// $results[] = $data;
@@ -182,16 +188,16 @@ class eRC5 {
 	
 	public function decrypt($enc) {
 		
-		$abcd = eRC5::processDec("252A","6EF7","95B3","32E7");
-		// var_dump($abcd);
-		
-		exit();
-		
-		// echo "Decryption\n";
+		// echo "Decryption\n";		
 		
 		$divisions = eRC5::divisions($enc);
 		
 		$dir = "../cache";		
+		
+		$output = '<span class="success-response">...</span>'."\r\n";
+		$output .= '<span class="success-response">DECRYPTION</span>'."\r\n";
+		$output .= '<span class="success-response">...</span>'."\r\n";
+		file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);		
 		
 		$r = $this->r;
 		$i = $r;
@@ -217,7 +223,7 @@ class eRC5 {
 			// $data = array("round"=>$i,"encrypted"=>$Ar14.$Br14.$Cr14.$Dr14,"time"=>$execution_time);
 			// $results[] = $data;				
 			
-			file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);				
+			file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);
 			
 			--$i;
 			
@@ -227,10 +233,10 @@ class eRC5 {
 			
 			$output = '<span class="success-response">Round '.$i.':</span>'."\r\n";
 			// $time_start = microtime(true);				
-			$Ar13 = eRC5::strXor($Ar,$Cr);
-			$Br13 = eRC5::strXor($Br,$Cr);
-			$Cr13 = eRC5::strXor($Br,$Dr);
-			$Dr13 = eRC5::strXor($Dr,$Br);
+			$Ar13 = eRC5::strXor($Br,$Ar);
+			$Br13 = eRC5::strXor($Dr,$Ar);
+			$Cr13 = eRC5::strXor($Dr,$Cr);
+			$Dr13 = eRC5::strXor($Cr,$Dr);
 			// $time_end = microtime(true);
 			// $execution_time = $time_end - $time_start;			
 			$output .= '<span class="success-response">Decrypted Text: '.$Ar13.$Br13.$Cr13.$Dr13.'</span>'."\r\n";
@@ -274,14 +280,7 @@ class eRC5 {
 		$C = $Cr12;
 		$D = $Dr12;
 		
-		for ($i=11; $i>=1; --$i) {
-			
-			/* if ($i==9) {
-				var_dump($A);
-				var_dump($B);
-				var_dump($C);
-				var_dump($D);
-			}; */
+		for ($i=11; $i>=0; --$i) {			
 			
 			$output = '<span class="success-response">Round '.$i.':</span>'."\r\n";
 			// $time_start = microtime(true);			
@@ -305,73 +304,14 @@ class eRC5 {
 			// $data = array("round"=>$i,"encrypted"=>$A.$B.$C.$D,"time"=>$execution_time);
 			// $results[] = $data;				
 			
-			file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);			
+			if ($i > 0) file_put_contents("$dir/erc5.txt",$output,FILE_APPEND);			
 			
-		};
-		
-		/* $Br2_lr = eRC5::leftRotate($Br3);
-		$Br2 = eRC5::strXor($Ar3,$Br2_lr);
-		$Ar2_rr = eRC5::rightRotate($Ar3);
-		$Ar2 = eRC5::strXor($Ar2_rr,$Br2);
-
-		$Cr2_n = eRC5::negateStr($Cr3);
-		$Dr2_lr = eRC5::leftRotate($Dr3);
-		$Dr2_x = eRC5::strXor($Cr2_n,$Dr2_lr);		
-		$Dr2 = eRC5::negateStr($Dr2_x);
-		
-		$Cr2_rr = eRC5::rightRotate($Cr3);
-		$Cr2 = eRC5::strXor($Cr2_rr,$Dr2_x);		
-		
-		// echo "\n";
-		// echo "Round 2:\n";
-		// echo "A. $Ar2\n";
-		// echo "B. $Br2\n";
-		// echo "C. $Cr2\n";
-		// echo "D. $Dr2\n";
-
-		$Br1_lr = eRC5::leftRotate($Br2);
-		$Br1 = eRC5::strXor($Ar2,$Br1_lr);
-		$Ar1_rr = eRC5::rightRotate($Ar2);
-		$Ar1 = eRC5::strXor($Ar1_rr,$Br1);
-		
-		$Dr1_lr = eRC5::leftRotate($Dr2);
-		$Cr1_n = eRC5::negateStr($Cr2);
-		$Dr1_x = eRC5::strXor($Cr1_n,$Dr1_lr);
-		$Dr1 = eRC5::negateStr($Dr1_x);
-
-		$Cr1_rr = eRC5::rightRotate($Cr2);
-		$Cr1 = eRC5::strXor($Cr1_rr,$Dr1_x);		
-
-		// echo "\n";
-		// echo "Round 1:\n";
-		// echo "A. $Ar1\n";
-		// echo "B. $Br1\n";
-		// echo "C. $Cr1\n";
-		// echo "D. $Dr1\n";
-
-		$B_lr = eRC5::leftRotate($Br1);
-		$B = eRC5::strXor($Ar1,$B_lr);
-		$A_rr = eRC5::rightRotate($Ar1);
-		$A = eRC5::strXor($A_rr,$B);
-		
-		$C_n = eRC5::negateStr($Cr1);
-		$D_lr = eRC5::leftRotate($Dr1);
-		$D_x = eRC5::strXor($C_n,$D_lr);
-		$D = eRC5::negateStr($D_x);
-		
-		$C_rr = eRC5::rightRotate($Cr1);
-		$C = eRC5::strXor($C_rr,$D_x);
-		
-		// echo "\n";
-		// echo "A. $A\n";
-		// echo "B. $B\n";
-		// echo "C. $C\n";
-		// echo "D. $D\n";	 */	
+		};		
 
 		$pt = $A.$B.$C.$D;
-		
+
 		$dec = eRC5::kmXor($pt);
-		
+
 		return hex2bin($dec);
 		
 	}
@@ -400,35 +340,34 @@ class eRC5 {
 	
 	private function processDec($Ar3,$Br3,$Cr3,$Dr3) {
 
-		// $Br2_lr = eRC5::leftRotate($Br3);
-		// $Br2 = eRC5::strXor($Ar3,$Br2_lr);
-		// $Ar2_rr = eRC5::rightRotate($Ar3);
-		// $Ar2 = eRC5::strXor($Ar2_rr,$Br2);
+		$Br2_lr = eRC5::leftRotate($Br3);
+		$Br2 = eRC5::strXor($Ar3,$Br2_lr);
+		$Ar2_rr = eRC5::rightRotate($Ar3);
+		$Ar2 = eRC5::strXor($Ar2_rr,$Br2);
 
-		$Cr2_n = eRC5::negateStr($Cr3); //var_dump($Cr2_n);
-		$Dr2_lr = eRC5::leftRotate($Dr3); //var_dump($Dr2_lr);
-		$Dr2_x = eRC5::strXor($Cr2_n,$Dr2_lr); // var_dump($Dr2_x);
-		// $Dr2 = eRC5::negateStr($Dr2_x);
+		$Cr2_n = eRC5::negateStr($Cr3);
+		$Dr2_lr = eRC5::leftRotate($Dr3);
+		$Dr2_x = eRC5::strXor($Cr2_n,$Dr2_lr);
+		$Dr2 = eRC5::negateStr($Dr2_x);
 
-		// $Cr2_rr = eRC5::rightRotate($Cr3);
-		// $Cr2 = eRC5::strXor($Cr2_rr,$Dr2_x);
+		$Cr2_rr = eRC5::rightRotate($Cr3);
+		$Cr2 = eRC5::strXor($Cr2_rr,$Dr2_x);
 		
-		// $result = array($Ar2,$Br2,$Cr2,$Dr2);
-		// var_dump($result);
-		// return array($Ar2,$Br2,$Cr2,$Dr2);
+		$result = array($Ar2,$Br2,$Cr2,$Dr2);
+
+		return array($Ar2,$Br2,$Cr2,$Dr2);
 
 	}
 	
-	private function strXor($str1,$str2) {
-		var_dump(hexdec($str1));
-		var_dump(hexdec($str2));
+	private function strXor_($str1,$str2) {
+		
 		$str = dechex(hexdec($str1) ^ hexdec($str2));
-		var_dump($str);
+
 		return strtoupper($str);
 
 	}	
 	
-	private function strXor_($str1,$str2) {
+	public function strXor($str1,$str2) {
 	
 		$str1_arr = str_split($str1);
 		$str2_arr = str_split($str2);

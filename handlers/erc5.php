@@ -17,7 +17,6 @@ switch ($_GET['m']) {
 		$enc = $erc5->encrypt($_POST['text']);
 		$time_end = microtime(true);
 
-		// $usage = get_server_cpu_usage();
 		exec('wmic cpu get LoadPercentage', $p);
 
 		$execution_time = $time_end - $time_start;
@@ -36,7 +35,6 @@ switch ($_GET['m']) {
 		$dec = $erc5->decrypt($_POST['etext']);
 		$time_end = microtime(true);
 
-		// $usage = get_server_cpu_usage();
 		exec('wmic cpu get LoadPercentage', $p);
 
 		$execution_time = $time_end - $time_start;
